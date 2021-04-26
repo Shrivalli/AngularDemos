@@ -1,0 +1,79 @@
+<div class="panel panel-primary" *ngFor="let employee of employees">
+    <div id="maindiv">
+  <div class="panel-heading">
+     
+    <h3 class="panel-title">{{employee.name}}</h3>
+  </div>
+ 
+<div class="panel-body"> 
+  <div class="col-xs-12">
+    <div class="row">
+      <div class="col-md-2">
+        <img height="100" width="100" [src]="employee.photoPath">
+      </div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-xs-6">
+            Gender
+          </div>
+          <div class="col-xs-6">
+              :{{employee.gender}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                contactPreference
+            </div>
+            <div class="col-xs-6">
+                :{{employee.contactPreference}}
+              </div>
+          </div>
+        <div class="row" *ngIf="employee.email">
+            <div class="col-xs-6">
+              Email
+            </div>
+            <div class="col-xs-6">
+                :{{employee.email}}
+              </div>
+          </div>
+          <div class="row" [hidden]="!employee.phonenumber">
+              <div class="col-xs-6">
+                Phone Number
+              </div>
+              <div class="col-xs-6">
+                  :{{employee.phonenumber}}
+                </div>
+            </div>
+         
+            <div class="row">
+                <div class="col-xs-6">
+                    dateOfBirth
+                </div>
+                <div class="col-xs-6">
+                    :{{employee.dateOfBirth | date}}
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-xs-6">
+                    department
+                  </div>
+                  <div class="col-xs-6">
+                      :{{employee.department}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                      IsActive
+                    </div>
+                    <div class="col-xs-6">
+                        :{{employee.isActive}}
+                      </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+</div> 
+</div>
+
+</div>
+

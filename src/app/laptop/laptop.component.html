@@ -1,0 +1,39 @@
+<div class="panel panel-primary" *ngFor="let l of Laptops">
+    <div id="maindiv">
+  <div class="panel-heading">
+     
+    <h3 class="panel-title">{{l.Brandname}}</h3>
+  </div>
+ 
+<div class="panel-body"> 
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-xs-6">
+            Model Name
+          </div>
+          <div class="col-xs-6">
+              :{{l.Modelname}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                Price
+            </div>
+            <div class="col-xs-6">
+                :{{l.Price}}
+              </div>
+          </div>
+        <div class="row" *ngIf="l.Spec">
+            <div class="col-xs-6">
+              Specification:
+            </div>
+            <div class="col-xs-6">
+                :{{l.Spec}}
+              </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div> 
+
+
