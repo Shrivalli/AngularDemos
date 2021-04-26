@@ -12,6 +12,7 @@ import { LaptopComponent } from './laptop/laptop.component';
 import { UserComponent } from './user/user.component';
 import { EmployeelistComponent } from './employeelist/employeelist.component';
 import { EmpaddComponent } from './empadd/empadd.component';
+import { ComputerComponent } from './computer/computer.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { EmpaddComponent } from './empadd/empadd.component';
     LaptopComponent,
     UserComponent,
     EmployeelistComponent,
-    EmpaddComponent
+    EmpaddComponent,
+    ComputerComponent
   ],
   imports: [
     BrowserModule,
